@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    background-color: rgb(136, 22, 146);
+    padding: 30px;
+    border: 4px solid black;
+    height: 190px;
+    margin: 45px;
+}
+
+.div1{
+    background-color: rgb(255, 179, 0);
+    position: relative;
+    float: right;
+    padding: 30px;
+    border: 4px solid  #4d390c;
+    height: 120px;
+}
+
+.div2{
+    background-color: rgb(255, 179, 0);
+    display: inline;
+    position: relative;
+    float: right;
+    padding: 30px;
+    margin-right: 100px;
+    border: 4px solid  #4d390c;
+    height: 120px;
+}
+
+.div3{
+    background-color: rgb(255, 179, 0);
+    display: inline;
+    position: relative;
+    float: left;
+    padding: 30px;
+    border: 4px solid  #4d390c;
+    height: 120px;
+}

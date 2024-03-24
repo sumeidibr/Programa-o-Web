@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+    display: flex;
+    background-color: rgb(101, 15, 128);
+    border: 4px solid black;
+    margin: auto;
+    width: 1000px;
+    align-items: center;
+    justify-content: space-evenly;
+
+        }
+
+        .div1{
+            background-color: rgb(186, 132, 17);
+            border: 4px solid rgb(80, 48, 13);
+            padding: 80px;
+            margin: 20px;
+        }
+
+        .div2{
+            background-color: rgb(186, 132, 17);
+            border: 4px solid rgb(80, 48, 13);
+            padding: 80px;
+            margin: 20px;
+        }
+
+        .div3{
+            background-color: rgb(186, 132, 17);
+            border: 4px solid rgb(80, 48, 13);
+            padding: 80px;
+            margin: 20px;
+        }
+
+        .container{
+            display: grid;
+            border: 4px solid green;
+            grid-template-columns: auto auto auto;
+            
+        }
+
+        .container div{
+            background-color: white;
+            border: 4px solid aqua;
+            padding: 10px;
+        }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .sidebar_left{
+            grid-row-start: 2;
+            grid-row-end: 8;
+        }
+
+        .content_right{
+            
+        
+        }
+        /*
+         .header{
+            grid-area: header;
+            background-color: yellow;
+         }
+
+         .sidebar_left{
+            grid-area: left;
+            background-color: green;
+         }
+
+         .sidebar_right{
+            grid-area: sidebar_right;
+            background-color: aquamarine;
+         }
+
+         .content_left{
+            grid-area: content_left;
+            background-color: grey;
+         }
+
+         .content_right{
+            grid-area: content_right;
+            background-color: orange;
+         }
+
+         .footer_top{
+            grid-area: footer_top;
+            background-color: rosybrown;
+         }
+
+         .footer_bottom{
+            grid-area: footer_bottom;
+            background-color: wheat;
+         }**/
+
+         
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="div1">this is a box</div>
+        <div class="div2">this is a box</div>
+        <div class="div3">this is a box</div>
+    </section>
+
+    <!--Css Grid-->
+    <div class="container">
+        <div class="header">1</div>
+        <div class="sidebar_left">2</div>
+        <div class="sidebar_right">3</div>
+        <div class="content_left">4</div>
+        <div class="content_right">5</div>
+        <div class="footer_top">6</div>
+        <div class="footer_bottom">7</div>
+    </div>
+    
+</body>
+</html>
