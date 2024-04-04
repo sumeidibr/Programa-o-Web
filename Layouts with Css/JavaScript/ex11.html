@@ -50,17 +50,17 @@
     </style>
 </head>
 <body>
-    <form action="" class="formulario">
+    <form action="" class="formulario" method="post" id="form">
         <h1>Contact Form</h1>
         <h3>Connect with us</h3>
 
         <input type="text" placeholder="Your name" class="campos" name="name" id="nome">
 
-        <input type="email" placeholder="Your email adress" class="campos" name="email">
+        <input type="email" placeholder="Your email adress" class="campos" name="email" id="email">
 
-        <input type="text" placeholder="your phone number" class="campos" name="number">
+        <input type="text" placeholder="your phone number" class="campos" name="number" id="numero">
 
-        <input type="text" placeholder="Type your message here..." class="textArea" name="text" >
+        <input type="text" placeholder="Type your message here..." class="textArea" name="text" id="textoArea">
 
         <button class="btn" name="botao" id="btnSubmeter">Submit</button>
         
@@ -68,11 +68,56 @@
     </form>
 
     <script>
+        var form = document.getElementById('form');
+    var nome = document.getElementById('nome');
+    var email = document.getElementById('email');
+    var numero = document.getElementById('numero');
+    var texto = document.getElementById('textoArea');
 
-       
+    form.addEventListener('submit', function(event) {
+        var erro = false;
 
-      
-      
+        if (nome.value.trim() === '') {
+            nome.classList.add('error');
+            erro = true;
+            nome.style.borderStyle = 'red'
+            nome.style.backgroundColor = 'red'
+        } else {
+            nome.classList.remove('error');
+        }
+
+        if (email.value.trim() === '') {
+            email.classList.add('error');
+            erro = true;
+            email.style.borderStyle = 'red'
+            email.style.backgroundColor = 'red'
+        } else {
+            email.classList.remove('error');
+        }
+
+        if (numero.value.trim() === '') {
+            numero.classList.add('error');
+            erro = true;
+            numero.style.borderStyle = 'red'
+            numero.style.backgroundColor = 'red'
+        } else {
+            numero.classList.remove('error');
+        }
+
+        if (texto.value.trim() === '') {
+            texto.classList.add('error');
+            erro = true;
+            texto.style.borderStyle = 'red'
+            texto.style.backgroundColor = 'red'
+        } else {
+            texto.classList.remove('error');
+        }
+
+        if (erro) {
+            event.preventDefault();
+          //  alert('Por favor, preencha todos os campos em vermelho.');
+        }
+    });
     </script>
 </body>
 </html>
