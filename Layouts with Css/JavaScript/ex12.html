@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .carousel{
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            background-color: aqua;
+        }
+
+        .carousel-images{
+            display: flex;
+        }
+
+        .carousel-images img{
+            width: 100%;
+            display: block;
+        }
+
+        .prev, .next{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) !important;
+            background-color: rgba(0,0,0,0.5)
+            ;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next{
+            right: 0;
+        }
+
+    </style>
+
+    <script>
+        let atual = 0;
+        imagem = document.querySelectorAll('.carousel-images img');
+
+        function mostrarImagem(indice){
+            imagem.forEach(imagem =>imagem.style.display = 'none');
+            imagem[indice].style.display= 'block';
+        }
+
+        function avancar(){
+            atual++;
+            if(atual >= imagem.length){
+                atual = 0;
+            }
+            mostrarImagem(atual);
+        }
+
+        function voltar(){
+            atual--;
+            if(atual < 0){
+                atual = imagem.length - 1;
+            }
+            mostrarImagem(atual); //
+        }
+
+        mostrarImagem(atual); // most
+    </script>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="fotomanha.png" alt="">
+            <img src="fotonoite.png" alt="">
+            <img src="fototarde.png" alt="">
+            <img src="fotomanha.png" alt="">
+            <img src="fotonoite.png" alt="">
+            <img src="fototarde.png" alt="">
+            <img src="fotomanha.png" alt="">
+            <img src="fotonoite.png" alt="">
+            <img src="fototarde.png" alt="">
+        </div>
+        <button class="prev" onclick="voltar()"><</button>
+        <button class="next" onclick="avancar()">></button>
+    </div>
+</body>
+</html>
