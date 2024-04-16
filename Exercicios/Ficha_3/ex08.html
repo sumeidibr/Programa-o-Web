@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usando keyframes</title>
+    <style>
+
+        @keyframes animacao {
+            0%{
+                opacity: 1;
+                transform: translateX(-50px);
+            }
+
+            50%{
+                opacity: 0;
+                transform: translateX(20px)
+            }
+
+        }
+
+        div{
+            width: 100px;
+            height: 40px;
+            background: red;
+            border-radius: 10px;
+            opacity: 0;
+            animation-name: animacao;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            
+        }
+    </style>
 </head>
 <body>
-    @keyframes{
-
-        
-    }
+    <div></div>
 </body>
 </html>
