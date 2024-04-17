@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu responsivo</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+      .header{
+        background-color: yellow;
+        padding-inline: 16px;
+      }
+
+      .nav{
+        max-width: 1000px;
+        height: 70px;
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-list{
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+
+      .nav-list a{
+        padding-block: 16px;
+        text-decoration: none;
+      }
+        .hamburguer{
+            display: none;
+            border: none;
+            background: none;
+            border-top: 3px solid #1bddff;
+        }
+
+        .hamburguer::before,
+        .hamburguer::after{
+            content: " ";
+            width: 30px;
+            height: 3px;
+            display: block;
+            background-color: #27e6ff;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 750px)
+{
+    .hamburguer{
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vh;
+        height: 100vh;
+        background: #a5c;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+margin: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 0;
+        align-items: center;
+        pointer-events: none;
+    }
+
+    
+
+    .nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+}
+    </style>
 </head>
 <body>
- 
+
+   <script defer src="app.js"></script> 
+  
+       <header class="header">
+           
+            <nav class="nav">
+                <a href="">Menu</a>
+                <button class="hamburguer"></button>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Contact me</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+       </header>
+
 </body>
 </html>
