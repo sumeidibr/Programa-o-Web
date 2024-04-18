@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#jogo{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    float: left;
+}
+
+
+.close{
+    background-color: black  !important;
+}
